@@ -43,6 +43,7 @@
             chkVeryGood = new CheckBox();
             dtgDataGridView = new DataGridView();
             btnComboBox = new Button();
+            btnPanels = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -185,7 +186,18 @@
             btnComboBox.UseVisualStyleBackColor = false;
             btnComboBox.Click += NavigateToComboBox;
             // 
-            // Form1
+            // btnPanels
+            // 
+            btnPanels.BackColor = Color.FromArgb(255, 192, 192);
+            btnPanels.Location = new Point(501, 103);
+            btnPanels.Name = "btnPanels";
+            btnPanels.Size = new Size(119, 49);
+            btnPanels.TabIndex = 8;
+            btnPanels.Text = "Panels";
+            btnPanels.UseVisualStyleBackColor = false;
+            btnPanels.Click += NavigateToPanels;
+            // 
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -196,6 +208,7 @@
             Controls.Add(chkGood);
             Controls.Add(rdoFemale);
             Controls.Add(rdoMale);
+            Controls.Add(btnPanels);
             Controls.Add(btnComboBox);
             Controls.Add(btnSave);
             Controls.Add(txtSalary);
@@ -208,7 +221,7 @@
             Controls.Add(lblName);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dtgDataGridView).EndInit();
@@ -233,5 +246,6 @@
         private CheckBox chkVeryGood;
         private DataGridView dtgDataGridView;
         private Button btnComboBox;
+        private Button btnPanels;
     }
 }

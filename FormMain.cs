@@ -25,6 +25,15 @@ namespace WinFormReview
             Hide();
         }
 
+        private void NavigateToPanels(object sender, EventArgs e)
+        {
+            new FormPanels()
+            {
+                Tag = this
+            }.Show(this);
+            Hide();
+        }
+
         private void SaveData(object sender, EventArgs e)
         {
             name = txtName.Text;
