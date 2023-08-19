@@ -2,7 +2,7 @@ using System.Data;
 
 namespace WinFormReview
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         private readonly DataTable dataTable = new();
         string name = string.Empty;
@@ -11,14 +11,14 @@ namespace WinFormReview
         string gender = string.Empty;
         string review = string.Empty;
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
 
         private void NavigateToComboBox(object sender, EventArgs e)
         {
-            new Form2()
+            new FormComboBox()
             {
                 Tag = this
             }.Show(this);

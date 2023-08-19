@@ -1,17 +1,17 @@
 ﻿namespace WinFormReview
 {
-    public partial class Form2 : Form
+    public partial class FormComboBox : Form
     {
         string? name = string.Empty;
 
-        public Form2()
+        public FormComboBox()
         {
             InitializeComponent();
         }
 
         private void NavigateToMain(object sender, EventArgs e)
         {
-            (Tag as Form1)?.Show();
+            (Tag as FormMain)?.Show();
             Close();
         }
 

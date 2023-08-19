@@ -1,6 +1,6 @@
 ﻿namespace WinFormReview
 {
-    partial class Form2
+    partial class FormComboBox
     {
         /// <summary>
         /// Required designer variable.
@@ -73,7 +73,7 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += ShowName;
             // 
-            // Form2
+            // FormComboBox
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -83,9 +83,9 @@
             Controls.Add(cbbCourse);
             Controls.Add(label1);
             Controls.Add(btnMain);
-            Name = "Form2";
+            Name = "FormComboBox";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormReview2";
+            Text = "Form Combo Box";
             Load += FormLoad;
             ResumeLayout(false);
             PerformLayout();
