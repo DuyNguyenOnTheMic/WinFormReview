@@ -83,6 +83,7 @@
             Controls.Add(cbbCourse);
             Controls.Add(label1);
             Controls.Add(btnMain);
+            MaximizeBox = false;
             Name = "FormComboBox";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Combo Box";
