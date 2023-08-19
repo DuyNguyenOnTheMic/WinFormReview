@@ -36,6 +36,12 @@
             txtSalary = new TextBox();
             btnSave = new Button();
             lblResult = new Label();
+            rdoMale = new RadioButton();
+            lblGender = new Label();
+            rdoFemale = new RadioButton();
+            label1 = new Label();
+            chkGood = new CheckBox();
+            chkVeryGood = new CheckBox();
             SuspendLayout();
             // 
             // lblName
@@ -88,10 +94,10 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(159, 202);
+            btnSave.Location = new Point(159, 319);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(119, 49);
-            btnSave.TabIndex = 4;
+            btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += SaveData;
@@ -99,22 +105,88 @@
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(49, 276);
+            lblResult.Location = new Point(49, 424);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(0, 20);
             lblResult.TabIndex = 0;
+            // 
+            // rdoMale
+            // 
+            rdoMale.AutoSize = true;
+            rdoMale.Location = new Point(159, 203);
+            rdoMale.Name = "rdoMale";
+            rdoMale.Size = new Size(63, 24);
+            rdoMale.TabIndex = 4;
+            rdoMale.TabStop = true;
+            rdoMale.Text = "Male";
+            rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // lblGender
+            // 
+            lblGender.AutoSize = true;
+            lblGender.Location = new Point(49, 205);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(64, 20);
+            lblGender.TabIndex = 0;
+            lblGender.Text = "Gender: ";
+            // 
+            // rdoFemale
+            // 
+            rdoFemale.AutoSize = true;
+            rdoFemale.Location = new Point(308, 203);
+            rdoFemale.Name = "rdoFemale";
+            rdoFemale.Size = new Size(78, 24);
+            rdoFemale.TabIndex = 5;
+            rdoFemale.TabStop = true;
+            rdoFemale.Text = "Female";
+            rdoFemale.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(49, 259);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Review: ";
+            // 
+            // chkGood
+            // 
+            chkGood.AutoSize = true;
+            chkGood.Location = new Point(159, 258);
+            chkGood.Name = "chkGood";
+            chkGood.Size = new Size(68, 24);
+            chkGood.TabIndex = 6;
+            chkGood.Text = "Good";
+            chkGood.UseVisualStyleBackColor = true;
+            // 
+            // chkVeryGood
+            // 
+            chkVeryGood.AutoSize = true;
+            chkVeryGood.Location = new Point(308, 255);
+            chkVeryGood.Name = "chkVeryGood";
+            chkVeryGood.Size = new Size(99, 24);
+            chkVeryGood.TabIndex = 7;
+            chkVeryGood.Text = "Very good";
+            chkVeryGood.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(533, 403);
+            ClientSize = new Size(533, 538);
+            Controls.Add(chkVeryGood);
+            Controls.Add(chkGood);
+            Controls.Add(rdoFemale);
+            Controls.Add(rdoMale);
             Controls.Add(btnSave);
             Controls.Add(txtSalary);
             Controls.Add(txtDesignation);
             Controls.Add(txtName);
             Controls.Add(lblResult);
+            Controls.Add(label1);
+            Controls.Add(lblGender);
             Controls.Add(lblSalary);
             Controls.Add(lblDesignation);
             Controls.Add(lblName);
@@ -137,5 +209,11 @@
         private TextBox txtSalary;
         private Button btnSave;
         private Label lblResult;
+        private RadioButton rdoMale;
+        private Label lblGender;
+        private RadioButton rdoFemale;
+        private Label label1;
+        private CheckBox chkGood;
+        private CheckBox chkVeryGood;
     }
 }
