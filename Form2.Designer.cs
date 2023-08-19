@@ -61,6 +61,7 @@
             cbbCourse.Name = "cbbCourse";
             cbbCourse.Size = new Size(318, 28);
             cbbCourse.TabIndex = 2;
+            cbbCourse.SelectedIndexChanged += SelectedIndexChanged;
             // 
             // btnSave
             // 
@@ -70,6 +71,7 @@
             btnSave.TabIndex = 3;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += ShowName;
             // 
             // Form2
             // 
@@ -84,7 +86,7 @@
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormReview2";
-            Load += Form2_Load;
+            Load += FormLoad;
             ResumeLayout(false);
             PerformLayout();
         }
