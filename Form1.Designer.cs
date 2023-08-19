@@ -35,13 +35,15 @@
             txtDesignation = new TextBox();
             txtSalary = new TextBox();
             btnSave = new Button();
-            lblResult = new Label();
             rdoMale = new RadioButton();
             lblGender = new Label();
             rdoFemale = new RadioButton();
             label1 = new Label();
             chkGood = new CheckBox();
             chkVeryGood = new CheckBox();
+            dtgDataGridView = new DataGridView();
+            btnComboBox = new Button();
+            ((System.ComponentModel.ISupportInitialize)dtgDataGridView).BeginInit();
             SuspendLayout();
             // 
             // lblName
@@ -94,21 +96,13 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(159, 319);
+            btnSave.Location = new Point(501, 233);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(119, 49);
             btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += SaveData;
-            // 
-            // lblResult
-            // 
-            lblResult.AutoSize = true;
-            lblResult.Location = new Point(49, 424);
-            lblResult.Name = "lblResult";
-            lblResult.Size = new Size(0, 20);
-            lblResult.TabIndex = 0;
             // 
             // rdoMale
             // 
@@ -170,21 +164,43 @@
             chkVeryGood.Text = "Very good";
             chkVeryGood.UseVisualStyleBackColor = true;
             // 
+            // dtgDataGridView
+            // 
+            dtgDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgDataGridView.Location = new Point(49, 339);
+            dtgDataGridView.Name = "dtgDataGridView";
+            dtgDataGridView.RowHeadersWidth = 51;
+            dtgDataGridView.RowTemplate.Height = 29;
+            dtgDataGridView.Size = new Size(571, 188);
+            dtgDataGridView.TabIndex = 9;
+            // 
+            // btnComboBox
+            // 
+            btnComboBox.BackColor = Color.FromArgb(255, 192, 192);
+            btnComboBox.Location = new Point(501, 48);
+            btnComboBox.Name = "btnComboBox";
+            btnComboBox.Size = new Size(119, 49);
+            btnComboBox.TabIndex = 8;
+            btnComboBox.Text = "ComboBox";
+            btnComboBox.UseVisualStyleBackColor = false;
+            btnComboBox.Click += NavigateToComboBox;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(533, 538);
+            ClientSize = new Size(670, 560);
+            Controls.Add(dtgDataGridView);
             Controls.Add(chkVeryGood);
             Controls.Add(chkGood);
             Controls.Add(rdoFemale);
             Controls.Add(rdoMale);
+            Controls.Add(btnComboBox);
             Controls.Add(btnSave);
             Controls.Add(txtSalary);
             Controls.Add(txtDesignation);
             Controls.Add(txtName);
-            Controls.Add(lblResult);
             Controls.Add(label1);
             Controls.Add(lblGender);
             Controls.Add(lblSalary);
@@ -195,6 +211,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dtgDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,12 +225,13 @@
         private TextBox txtDesignation;
         private TextBox txtSalary;
         private Button btnSave;
-        private Label lblResult;
         private RadioButton rdoMale;
         private Label lblGender;
         private RadioButton rdoFemale;
         private Label label1;
         private CheckBox chkGood;
         private CheckBox chkVeryGood;
+        private DataGridView dtgDataGridView;
+        private Button btnComboBox;
     }
 }
