@@ -15,7 +15,7 @@
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gege");
+            new Registration().Show();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
