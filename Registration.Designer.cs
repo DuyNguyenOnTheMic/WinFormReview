@@ -50,6 +50,9 @@
             btnDelete = new Button();
             btnUpdate = new Button();
             dtpDateTimePicker = new DateTimePicker();
+            button1 = new Button();
+            lblSearch = new Label();
+            txtSearch = new TextBox();
             gbRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgdataGridView).BeginInit();
             gbOperations.SuspendLayout();
@@ -57,7 +60,9 @@
             // 
             // gbRegistration
             // 
+            gbRegistration.Controls.Add(txtSearch);
             gbRegistration.Controls.Add(txtAddress);
+            gbRegistration.Controls.Add(lblSearch);
             gbRegistration.Controls.Add(txtID);
             gbRegistration.Controls.Add(lblAddress);
             gbRegistration.Controls.Add(lblGender);
@@ -75,7 +80,7 @@
             gbRegistration.Controls.Add(lblFirstName);
             gbRegistration.Location = new Point(12, 45);
             gbRegistration.Name = "gbRegistration";
-            gbRegistration.Size = new Size(770, 453);
+            gbRegistration.Size = new Size(770, 496);
             gbRegistration.TabIndex = 0;
             gbRegistration.TabStop = false;
             gbRegistration.Text = "Registration";
@@ -124,7 +129,7 @@
             // dtgdataGridView
             // 
             dtgdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgdataGridView.Location = new Point(13, 237);
+            dtgdataGridView.Location = new Point(13, 284);
             dtgdataGridView.Name = "dtgdataGridView";
             dtgdataGridView.RowHeadersWidth = 51;
             dtgdataGridView.RowTemplate.Height = 29;
@@ -233,12 +238,13 @@
             // 
             // gbOperations
             // 
+            gbOperations.Controls.Add(button1);
             gbOperations.Controls.Add(btnDelete);
             gbOperations.Controls.Add(btnUpdate);
             gbOperations.Controls.Add(btnSave);
             gbOperations.Location = new Point(788, 45);
             gbOperations.Name = "gbOperations";
-            gbOperations.Size = new Size(176, 453);
+            gbOperations.Size = new Size(176, 496);
             gbOperations.TabIndex = 1;
             gbOperations.TabStop = false;
             gbOperations.Text = "Operations";
@@ -258,7 +264,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(41, 128, 185);
+            btnUpdate.BackColor = Color.FromArgb(52, 152, 219);
             btnUpdate.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(6, 103);
@@ -276,12 +282,42 @@
             dtpDateTimePicker.Size = new Size(250, 27);
             dtpDateTimePicker.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(155, 89, 182);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(6, 246);
+            button1.Name = "button1";
+            button1.Size = new Size(164, 56);
+            button1.TabIndex = 2;
+            button1.Text = "Export to Excel";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += BtnDelete_Click;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.Location = new Point(13, 240);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(168, 20);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Search record by name: ";
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(187, 237);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(567, 27);
+            txtSearch.TabIndex = 7;
+            txtSearch.TextChanged += TxtSearch_TextChanged;
+            // 
             // Registration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(976, 510);
+            ClientSize = new Size(976, 553);
             Controls.Add(dtpDateTimePicker);
             Controls.Add(gbOperations);
             Controls.Add(gbRegistration);
@@ -320,5 +356,8 @@
         private Button btnDelete;
         private Button btnUpdate;
         private DateTimePicker dtpDateTimePicker;
+        private Button button1;
+        private TextBox txtSearch;
+        private Label lblSearch;
     }
 }

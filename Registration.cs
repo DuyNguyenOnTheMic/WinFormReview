@@ -121,6 +121,28 @@ namespace WinFormReview
             }
         }
 
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // Search records
+                string searchKey = txtSearch.Text;
+                connection.Open();
+                adapter = new SqlDataAdapter($"SELECT * FROM EMPLOYEE "
+                                             + $"WHERE FirstName LIKE '%{searchKey}%'"
+                                             + $"OR LastName LIKE '%{searchKey}%'", connection);
+                dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                dtgdataGridView.DataSource = dataTable;
+                connection.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                connection.Close();
+            }
+        }
+
         private void Display()
         {
             try
