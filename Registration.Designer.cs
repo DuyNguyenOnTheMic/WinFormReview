@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             gbRegistration = new GroupBox();
+            txtSearch = new TextBox();
             txtAddress = new TextBox();
+            lblSearch = new Label();
             txtID = new TextBox();
             lblAddress = new Label();
             lblGender = new Label();
@@ -47,12 +49,10 @@
             lblFirstName = new Label();
             btnSave = new Button();
             gbOperations = new GroupBox();
+            btnExport = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
             dtpDateTimePicker = new DateTimePicker();
-            button1 = new Button();
-            lblSearch = new Label();
-            txtSearch = new TextBox();
             gbRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgdataGridView).BeginInit();
             gbOperations.SuspendLayout();
@@ -85,12 +85,29 @@
             gbRegistration.TabStop = false;
             gbRegistration.Text = "Registration";
             // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(187, 237);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(567, 27);
+            txtSearch.TabIndex = 7;
+            txtSearch.TextChanged += TxtSearch_TextChanged;
+            // 
             // txtAddress
             // 
             txtAddress.Location = new Point(107, 189);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(647, 27);
             txtAddress.TabIndex = 7;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.Location = new Point(13, 240);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(168, 20);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Search record by name: ";
             // 
             // txtID
             // 
@@ -238,7 +255,7 @@
             // 
             // gbOperations
             // 
-            gbOperations.Controls.Add(button1);
+            gbOperations.Controls.Add(btnExport);
             gbOperations.Controls.Add(btnDelete);
             gbOperations.Controls.Add(btnUpdate);
             gbOperations.Controls.Add(btnSave);
@@ -248,6 +265,19 @@
             gbOperations.TabIndex = 1;
             gbOperations.TabStop = false;
             gbOperations.Text = "Operations";
+            // 
+            // btnExport
+            // 
+            btnExport.BackColor = Color.FromArgb(155, 89, 182);
+            btnExport.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnExport.ForeColor = Color.White;
+            btnExport.Location = new Point(6, 246);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(164, 56);
+            btnExport.TabIndex = 2;
+            btnExport.Text = "Export to Excel";
+            btnExport.UseVisualStyleBackColor = false;
+            btnExport.Click += BtnExport_Click;
             // 
             // btnDelete
             // 
@@ -281,36 +311,6 @@
             dtpDateTimePicker.Name = "dtpDateTimePicker";
             dtpDateTimePicker.Size = new Size(250, 27);
             dtpDateTimePicker.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(155, 89, 182);
-            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(6, 246);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 56);
-            button1.TabIndex = 2;
-            button1.Text = "Export to Excel";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += BtnDelete_Click;
-            // 
-            // lblSearch
-            // 
-            lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(13, 240);
-            lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(168, 20);
-            lblSearch.TabIndex = 0;
-            lblSearch.Text = "Search record by name: ";
-            // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(187, 237);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(567, 27);
-            txtSearch.TabIndex = 7;
-            txtSearch.TextChanged += TxtSearch_TextChanged;
             // 
             // Registration
             // 
@@ -356,7 +356,7 @@
         private Button btnDelete;
         private Button btnUpdate;
         private DateTimePicker dtpDateTimePicker;
-        private Button button1;
+        private Button btnExport;
         private TextBox txtSearch;
         private Label lblSearch;
     }
