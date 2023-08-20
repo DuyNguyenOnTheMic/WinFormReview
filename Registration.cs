@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Text.RegularExpressions;
 using WinFormReview.Helpers;
 
@@ -53,6 +54,7 @@ namespace WinFormReview
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
+                    connection.Close();
                 }
             }
         }
@@ -68,9 +70,10 @@ namespace WinFormReview
                 dtgdataGridView.DataSource = dataTable;
                 connection.Close();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+                connection.Close();
             }
         }
 
