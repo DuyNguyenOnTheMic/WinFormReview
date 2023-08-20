@@ -38,13 +38,13 @@
             rdoMale = new RadioButton();
             rdoFemale = new RadioButton();
             txtEmail = new TextBox();
-            txtFullName = new TextBox();
+            txtlastName = new TextBox();
             txtDesign = new TextBox();
             lblEmail = new Label();
-            txtName = new TextBox();
-            lblFullname = new Label();
+            txtFirstName = new TextBox();
+            lblLastName = new Label();
             lblDesign = new Label();
-            lblName = new Label();
+            lblFirstName = new Label();
             btnSave = new Button();
             gbOperations = new GroupBox();
             btnDelete = new Button();
@@ -66,13 +66,13 @@
             gbRegistration.Controls.Add(rdoMale);
             gbRegistration.Controls.Add(rdoFemale);
             gbRegistration.Controls.Add(txtEmail);
-            gbRegistration.Controls.Add(txtFullName);
+            gbRegistration.Controls.Add(txtlastName);
             gbRegistration.Controls.Add(txtDesign);
             gbRegistration.Controls.Add(lblEmail);
-            gbRegistration.Controls.Add(txtName);
-            gbRegistration.Controls.Add(lblFullname);
+            gbRegistration.Controls.Add(txtFirstName);
+            gbRegistration.Controls.Add(lblLastName);
             gbRegistration.Controls.Add(lblDesign);
-            gbRegistration.Controls.Add(lblName);
+            gbRegistration.Controls.Add(lblFirstName);
             gbRegistration.Location = new Point(12, 45);
             gbRegistration.Name = "gbRegistration";
             gbRegistration.Size = new Size(770, 453);
@@ -85,14 +85,14 @@
             txtAddress.Location = new Point(79, 189);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(675, 27);
-            txtAddress.TabIndex = 6;
+            txtAddress.TabIndex = 8;
             // 
             // txtID
             // 
-            txtID.Location = new Point(79, 136);
+            txtID.Location = new Point(107, 136);
             txtID.Name = "txtID";
             txtID.Size = new Size(270, 27);
-            txtID.TabIndex = 6;
+            txtID.TabIndex = 5;
             // 
             // lblAddress
             // 
@@ -137,7 +137,7 @@
             rdoMale.Location = new Point(484, 137);
             rdoMale.Name = "rdoMale";
             rdoMale.Size = new Size(63, 24);
-            rdoMale.TabIndex = 3;
+            rdoMale.TabIndex = 6;
             rdoMale.TabStop = true;
             rdoMale.Text = "Male";
             rdoMale.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             rdoFemale.Location = new Point(590, 137);
             rdoFemale.Name = "rdoFemale";
             rdoFemale.Size = new Size(78, 24);
-            rdoFemale.TabIndex = 3;
+            rdoFemale.TabIndex = 7;
             rdoFemale.TabStop = true;
             rdoFemale.Text = "Female";
             rdoFemale.UseVisualStyleBackColor = true;
@@ -158,21 +158,21 @@
             txtEmail.Location = new Point(484, 80);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(270, 27);
-            txtEmail.TabIndex = 2;
+            txtEmail.TabIndex = 4;
             // 
-            // txtFullName
+            // txtlastName
             // 
-            txtFullName.Location = new Point(484, 30);
-            txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(270, 27);
-            txtFullName.TabIndex = 2;
+            txtlastName.Location = new Point(484, 30);
+            txtlastName.Name = "txtlastName";
+            txtlastName.Size = new Size(270, 27);
+            txtlastName.TabIndex = 2;
             // 
             // txtDesign
             // 
-            txtDesign.Location = new Point(79, 80);
+            txtDesign.Location = new Point(107, 80);
             txtDesign.Name = "txtDesign";
             txtDesign.Size = new Size(270, 27);
-            txtDesign.TabIndex = 2;
+            txtDesign.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -183,21 +183,21 @@
             lblEmail.TabIndex = 0;
             lblEmail.Text = "Email: ";
             // 
-            // txtName
+            // txtFirstName
             // 
-            txtName.Location = new Point(79, 30);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(270, 27);
-            txtName.TabIndex = 2;
+            txtFirstName.Location = new Point(107, 30);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(270, 27);
+            txtFirstName.TabIndex = 1;
             // 
-            // lblFullname
+            // lblLastName
             // 
-            lblFullname.AutoSize = true;
-            lblFullname.Location = new Point(395, 33);
-            lblFullname.Name = "lblFullname";
-            lblFullname.Size = new Size(83, 20);
-            lblFullname.TabIndex = 0;
-            lblFullname.Text = "Full Name: ";
+            lblLastName.AutoSize = true;
+            lblLastName.Location = new Point(395, 33);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new Size(86, 20);
+            lblLastName.TabIndex = 0;
+            lblLastName.Text = "Last Name: ";
             // 
             // lblDesign
             // 
@@ -208,14 +208,14 @@
             lblDesign.TabIndex = 0;
             lblDesign.Text = "Design: ";
             // 
-            // lblName
+            // lblFirstName
             // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(13, 33);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(56, 20);
-            lblName.TabIndex = 0;
-            lblName.Text = "Name: ";
+            lblFirstName.AutoSize = true;
+            lblFirstName.Location = new Point(13, 33);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new Size(87, 20);
+            lblFirstName.TabIndex = 0;
+            lblFirstName.Text = "First Name: ";
             // 
             // btnSave
             // 
@@ -225,7 +225,7 @@
             btnSave.Location = new Point(6, 33);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(164, 56);
-            btnSave.TabIndex = 1;
+            btnSave.TabIndex = 9;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += BtnSave_Click;
@@ -250,7 +250,7 @@
             btnDelete.Location = new Point(6, 173);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(164, 56);
-            btnDelete.TabIndex = 1;
+            btnDelete.TabIndex = 11;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -262,7 +262,7 @@
             btnUpdate.Location = new Point(6, 103);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(164, 56);
-            btnUpdate.TabIndex = 1;
+            btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -298,11 +298,11 @@
         private GroupBox gbRegistration;
         private DataGridView dtgdataGridView;
         private RadioButton rdoFemale;
-        private TextBox txtName;
+        private TextBox txtFirstName;
         private Button btnSave;
-        private Label lblName;
-        private TextBox txtFullName;
-        private Label lblFullname;
+        private Label lblFirstName;
+        private TextBox txtlastName;
+        private Label lblLastName;
         private TextBox txtEmail;
         private TextBox txtDesign;
         private Label lblEmail;
