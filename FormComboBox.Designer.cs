@@ -43,7 +43,7 @@
             btnMain.TabIndex = 0;
             btnMain.Text = "Main";
             btnMain.UseVisualStyleBackColor = false;
-            btnMain.Click += NavigateToMain;
+            btnMain.Click += BtnMain_Click;
             // 
             // label1
             // 
@@ -61,7 +61,7 @@
             cbbCourse.Name = "cbbCourse";
             cbbCourse.Size = new Size(318, 28);
             cbbCourse.TabIndex = 2;
-            cbbCourse.SelectedIndexChanged += SelectedIndexChanged;
+            cbbCourse.SelectedIndexChanged += CbbCourse_SelectedIndexChanged;
             // 
             // btnSave
             // 
@@ -71,7 +71,7 @@
             btnSave.TabIndex = 3;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += ShowName;
+            btnSave.Click += BtnSave_Click;
             // 
             // FormComboBox
             // 
@@ -87,7 +87,7 @@
             Name = "FormComboBox";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Combo Box";
-            Load += FormLoad;
+            Load += Form_Load;
             ResumeLayout(false);
             PerformLayout();
         }

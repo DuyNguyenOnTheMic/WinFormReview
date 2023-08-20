@@ -9,13 +9,13 @@
             InitializeComponent();
         }
 
-        private void NavigateToMain(object sender, EventArgs e)
+        private void BtnMain_Click(object sender, EventArgs e)
         {
             (Tag as FormMain)?.Show();
             Close();
         }
 
-        private void FormLoad(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
             cbbCourse.Items.Add("C# Programming");
             cbbCourse.Items.Add("C++ Programming");
@@ -24,12 +24,12 @@
             cbbCourse.Items.Add("PHP Programming");
         }
 
-        private void SelectedIndexChanged(object sender, EventArgs e)
+        private void CbbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
             name = cbbCourse.SelectedItem.ToString();
         }
 
-        private void ShowName(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             MessageBox.Show(name);
         }

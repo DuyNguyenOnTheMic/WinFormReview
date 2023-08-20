@@ -12,5 +12,15 @@
             (Tag as FormMain)?.Show();
             Close();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gege");
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

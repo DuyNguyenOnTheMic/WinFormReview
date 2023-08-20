@@ -121,7 +121,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQuSURBVFhHxZd7
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQuSURBVFhHxZd7
         TFtVHMcxxn/813+XuI7NR5yjuJjtH//aEh7RjM3HYkwMS3BGF+IrzsT9NzQxumniFFGzxL2U54YdcwYG
         EwRa6AOQQgst7aW9lJW2K4UW2q73fD3n9pa1vb1LuF3CL/mkyUl7v5/zO+fce1uSXbMhItiDBDMU/xqw
         9PAg/ij2SDHKNRskhAnYQ6TQRYoiGMOLUoxyZQv41wja7M0FL6aGTQm02G7gRPcRVLeW4v3uGjjCS7IL
@@ -143,4 +143,7 @@
         gg==
 </value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
