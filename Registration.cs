@@ -167,7 +167,7 @@ namespace WinFormReview
             {
                 for (int j = 0; j < dtgdataGridView.Columns.Count; j++)
                 {
-                    ws.Cells[i + 2, j + 1] = dtgdataGridView.Rows[i].Cells[j].Value.ToString();
+                    ws.Cells[i + 2, j + 1] = dtgdataGridView.Rows[i].Cells[j].Value?.ToString();
                 }
             }
         }
