@@ -82,17 +82,17 @@
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(79, 189);
+            txtAddress.Location = new Point(107, 189);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(675, 27);
-            txtAddress.TabIndex = 8;
+            txtAddress.Size = new Size(647, 27);
+            txtAddress.TabIndex = 7;
             // 
             // txtID
             // 
             txtID.Location = new Point(107, 136);
             txtID.Name = "txtID";
             txtID.Size = new Size(270, 27);
-            txtID.TabIndex = 5;
+            txtID.TabIndex = 4;
             // 
             // lblAddress
             // 
@@ -100,7 +100,7 @@
             lblAddress.Location = new Point(13, 192);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(69, 20);
-            lblAddress.TabIndex = 5;
+            lblAddress.TabIndex = 0;
             lblAddress.Text = "Address: ";
             // 
             // lblGender
@@ -109,7 +109,7 @@
             lblGender.Location = new Point(395, 139);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(64, 20);
-            lblGender.TabIndex = 5;
+            lblGender.TabIndex = 0;
             lblGender.Text = "Gender: ";
             // 
             // lblID
@@ -118,7 +118,7 @@
             lblID.Location = new Point(13, 139);
             lblID.Name = "lblID";
             lblID.Size = new Size(27, 20);
-            lblID.TabIndex = 5;
+            lblID.TabIndex = 0;
             lblID.Text = "ID:";
             // 
             // dtgdataGridView
@@ -129,7 +129,7 @@
             dtgdataGridView.RowHeadersWidth = 51;
             dtgdataGridView.RowTemplate.Height = 29;
             dtgdataGridView.Size = new Size(741, 194);
-            dtgdataGridView.TabIndex = 4;
+            dtgdataGridView.TabIndex = 8;
             // 
             // rdoMale
             // 
@@ -137,7 +137,7 @@
             rdoMale.Location = new Point(484, 137);
             rdoMale.Name = "rdoMale";
             rdoMale.Size = new Size(63, 24);
-            rdoMale.TabIndex = 6;
+            rdoMale.TabIndex = 5;
             rdoMale.TabStop = true;
             rdoMale.Text = "Male";
             rdoMale.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             rdoFemale.Location = new Point(590, 137);
             rdoFemale.Name = "rdoFemale";
             rdoFemale.Size = new Size(78, 24);
-            rdoFemale.TabIndex = 7;
+            rdoFemale.TabIndex = 6;
             rdoFemale.TabStop = true;
             rdoFemale.Text = "Female";
             rdoFemale.UseVisualStyleBackColor = true;
@@ -158,21 +158,21 @@
             txtEmail.Location = new Point(484, 80);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(270, 27);
-            txtEmail.TabIndex = 4;
+            txtEmail.TabIndex = 3;
             // 
             // txtlastName
             // 
             txtlastName.Location = new Point(484, 30);
             txtlastName.Name = "txtlastName";
             txtlastName.Size = new Size(270, 27);
-            txtlastName.TabIndex = 2;
+            txtlastName.TabIndex = 1;
             // 
             // txtDesignation
             // 
             txtDesignation.Location = new Point(107, 80);
             txtDesignation.Name = "txtDesignation";
             txtDesignation.Size = new Size(270, 27);
-            txtDesignation.TabIndex = 3;
+            txtDesignation.TabIndex = 2;
             // 
             // lblEmail
             // 
@@ -188,7 +188,7 @@
             txtFirstName.Location = new Point(107, 30);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(270, 27);
-            txtFirstName.TabIndex = 1;
+            txtFirstName.TabIndex = 0;
             // 
             // lblLastName
             // 
@@ -225,7 +225,7 @@
             btnSave.Location = new Point(6, 33);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(164, 56);
-            btnSave.TabIndex = 9;
+            btnSave.TabIndex = 0;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += BtnSave_Click;
@@ -250,7 +250,7 @@
             btnDelete.Location = new Point(6, 173);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(164, 56);
-            btnDelete.TabIndex = 11;
+            btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -262,7 +262,7 @@
             btnUpdate.Location = new Point(6, 103);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(164, 56);
-            btnUpdate.TabIndex = 10;
+            btnUpdate.TabIndex = 1;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
             // 
