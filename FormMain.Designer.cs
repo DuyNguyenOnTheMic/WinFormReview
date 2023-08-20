@@ -184,6 +184,7 @@
             // btnComboBox
             // 
             btnComboBox.BackColor = Color.FromArgb(255, 192, 192);
+            btnComboBox.CausesValidation = false;
             btnComboBox.Location = new Point(501, 48);
             btnComboBox.Name = "btnComboBox";
             btnComboBox.Size = new Size(119, 49);
@@ -195,6 +196,7 @@
             // btnPanels
             // 
             btnPanels.BackColor = Color.FromArgb(255, 192, 192);
+            btnPanels.CausesValidation = false;
             btnPanels.Location = new Point(501, 103);
             btnPanels.Name = "btnPanels";
             btnPanels.Size = new Size(119, 49);
