@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using WinFormReview.Helpers;
 
@@ -9,11 +10,14 @@ namespace WinFormReview
         private readonly string databaseConnection = @"Data Source=LENOVO\SQLEXPRESS;Initial Catalog=WinformReview;Integrated Security=True";
         private readonly SqlConnection connection;
         private SqlCommand? command;
+        private SqlDataAdapter? adapter;
+        private DataTable? dataTable;
 
         public Registration()
         {
             InitializeComponent();
             connection = new(databaseConnection);
+            Display();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -44,11 +48,29 @@ namespace WinFormReview
                     connection.Close();
                     MessageBox.Show("Your data has been saved in the database! 😊");
                     FormClearing.ClearGroupBoxFormControls(gbRegistration);
+                    Display();
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void Display()
+        {
+            try
+            {
+                dataTable = new DataTable();
+                connection.Open();
+                adapter = new SqlDataAdapter("SELECT * FROM EMPLOYEE", connection);
+                adapter.Fill(dataTable);
+                dtgdataGridView.DataSource = dataTable;
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
