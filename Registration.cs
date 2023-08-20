@@ -19,8 +19,7 @@ namespace WinFormReview
             InitializeComponent();
             connection = new(databaseConnection);
             Display();
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
+            SetButtonsState(false);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -51,6 +50,7 @@ namespace WinFormReview
                     connection.Close();
                     MessageBox.Show("Your data has been saved in the database! 😊");
                     FormClearing.ClearGroupBoxFormControls(gbRegistration);
+                    SetButtonsState(false);
                     Display();
                 }
                 catch (SqlException ex)
@@ -110,6 +110,8 @@ namespace WinFormReview
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Your data has been deleted in the database! 😊");
+                FormClearing.ClearGroupBoxFormControls(gbRegistration);
+                SetButtonsState(false);
                 Display();
             }
             catch (SqlException ex)
@@ -162,6 +164,13 @@ namespace WinFormReview
                 rdoFemale.Checked = true;
             }
             txtAddress.Text = dtgdataGridView.Rows[e.RowIndex].Cells[7].Value.ToString();
+            SetButtonsState(true);
+        }
+
+        private void SetButtonsState(bool state)
+        {
+            btnUpdate.Enabled = state;
+            btnDelete.Enabled = state;
         }
     }
 }
