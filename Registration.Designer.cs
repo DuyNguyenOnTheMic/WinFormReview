@@ -39,11 +39,11 @@
             rdoFemale = new RadioButton();
             txtEmail = new TextBox();
             txtlastName = new TextBox();
-            txtDesign = new TextBox();
+            txtDesignation = new TextBox();
             lblEmail = new Label();
             txtFirstName = new TextBox();
             lblLastName = new Label();
-            lblDesign = new Label();
+            lblDesignation = new Label();
             lblFirstName = new Label();
             btnSave = new Button();
             gbOperations = new GroupBox();
@@ -67,11 +67,11 @@
             gbRegistration.Controls.Add(rdoFemale);
             gbRegistration.Controls.Add(txtEmail);
             gbRegistration.Controls.Add(txtlastName);
-            gbRegistration.Controls.Add(txtDesign);
+            gbRegistration.Controls.Add(txtDesignation);
             gbRegistration.Controls.Add(lblEmail);
             gbRegistration.Controls.Add(txtFirstName);
             gbRegistration.Controls.Add(lblLastName);
-            gbRegistration.Controls.Add(lblDesign);
+            gbRegistration.Controls.Add(lblDesignation);
             gbRegistration.Controls.Add(lblFirstName);
             gbRegistration.Location = new Point(12, 45);
             gbRegistration.Name = "gbRegistration";
@@ -167,12 +167,12 @@
             txtlastName.Size = new Size(270, 27);
             txtlastName.TabIndex = 2;
             // 
-            // txtDesign
+            // txtDesignation
             // 
-            txtDesign.Location = new Point(107, 80);
-            txtDesign.Name = "txtDesign";
-            txtDesign.Size = new Size(270, 27);
-            txtDesign.TabIndex = 3;
+            txtDesignation.Location = new Point(107, 80);
+            txtDesignation.Name = "txtDesignation";
+            txtDesignation.Size = new Size(270, 27);
+            txtDesignation.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -199,14 +199,14 @@
             lblLastName.TabIndex = 0;
             lblLastName.Text = "Last Name: ";
             // 
-            // lblDesign
+            // lblDesignation
             // 
-            lblDesign.AutoSize = true;
-            lblDesign.Location = new Point(13, 83);
-            lblDesign.Name = "lblDesign";
-            lblDesign.Size = new Size(62, 20);
-            lblDesign.TabIndex = 0;
-            lblDesign.Text = "Design: ";
+            lblDesignation.AutoSize = true;
+            lblDesignation.Location = new Point(13, 83);
+            lblDesignation.Name = "lblDesignation";
+            lblDesignation.Size = new Size(62, 20);
+            lblDesignation.TabIndex = 0;
+            lblDesignation.Text = "Design: ";
             // 
             // lblFirstName
             // 
@@ -304,9 +304,9 @@
         private TextBox txtlastName;
         private Label lblLastName;
         private TextBox txtEmail;
-        private TextBox txtDesign;
+        private TextBox txtDesignation;
         private Label lblEmail;
-        private Label lblDesign;
+        private Label lblDesignation;
         private TextBox txtID;
         private Label lblID;
         private TextBox txtAddress;
