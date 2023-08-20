@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using WinFormReview.Helpers;
 
 namespace WinFormReview
 {
@@ -42,6 +43,7 @@ namespace WinFormReview
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Your data has been saved in the database! 😊");
+                    FormClearing.ClearGroupBoxFormControls(gbRegistration);
                 }
                 catch (SqlException ex)
                 {

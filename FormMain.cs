@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Data;
+using WinFormReview.Helpers;
 
 namespace WinFormReview
 {
@@ -48,7 +49,7 @@ namespace WinFormReview
                 gender = rdoMale.Checked ? "Male" : "Female";
                 review = chkGood.Checked ? "Good" : "Very Good";
                 Display();
-                Empty();
+                FormClearing.ClearFormControls(this);
             }
         }
 
@@ -72,13 +73,6 @@ namespace WinFormReview
 
             dataTable.Rows.Add(dataRow);
             dtgDataGridView.DataSource = dataTable;
-        }
-
-        private void Empty()
-        {
-            txtName.Text = string.Empty;
-            txtDesignation.Text = string.Empty;
-            txtSalary.Text = string.Empty;
         }
 
         #region Validations
