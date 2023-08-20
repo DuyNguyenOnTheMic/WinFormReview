@@ -77,6 +77,7 @@ namespace WinFormReview
                 string gender = rdoMale.Checked ? "Male" : "Female";
                 try
                 {
+                    // Update employee
                     connection.Open();
                     command = new SqlCommand($"UPDATE EMPLOYEE "
                                              + $"SET FirstName='{txtFirstName.Text}',LastName='{txtLastName.Text}',"
