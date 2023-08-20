@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblName = new Label();
             lblDesignation = new Label();
             lblSalary = new Label();
@@ -44,7 +45,9 @@
             dtgDataGridView = new DataGridView();
             btnComboBox = new Button();
             btnPanels = new Button();
+            errorProvider = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dtgDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // lblName
@@ -80,6 +83,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(309, 27);
             txtName.TabIndex = 1;
+            txtName.Validating += TxtNameValidating;
             // 
             // txtDesignation
             // 
@@ -87,6 +91,7 @@
             txtDesignation.Name = "txtDesignation";
             txtDesignation.Size = new Size(309, 27);
             txtDesignation.TabIndex = 2;
+            txtDesignation.Validating += TxtDesignationValidating;
             // 
             // txtSalary
             // 
@@ -94,6 +99,7 @@
             txtSalary.Name = "txtSalary";
             txtSalary.Size = new Size(309, 27);
             txtSalary.TabIndex = 3;
+            txtSalary.Validating += TxtSalaryValidating;
             // 
             // btnSave
             // 
@@ -197,6 +203,10 @@
             btnPanels.UseVisualStyleBackColor = false;
             btnPanels.Click += NavigateToPanels;
             // 
+            // errorProvider
+            // 
+            errorProvider.ContainerControl = this;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -225,6 +235,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dtgDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -247,5 +258,6 @@
         private DataGridView dtgDataGridView;
         private Button btnComboBox;
         private Button btnPanels;
+        private ErrorProvider errorProvider;
     }
 }
