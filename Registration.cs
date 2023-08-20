@@ -9,9 +9,9 @@ namespace WinFormReview
     {
         private readonly string databaseConnection = @"Data Source=LENOVO\SQLEXPRESS;Initial Catalog=WinformReview;Integrated Security=True";
         private readonly SqlConnection connection;
-        private SqlCommand? command;
-        private SqlDataAdapter? adapter;
-        private DataTable? dataTable;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
+        private DataTable dataTable;
         int id;
 
         public Registration()
@@ -19,6 +19,8 @@ namespace WinFormReview
             InitializeComponent();
             connection = new(databaseConnection);
             Display();
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)

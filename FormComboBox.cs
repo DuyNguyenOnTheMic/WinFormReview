@@ -2,7 +2,7 @@
 {
     public partial class FormComboBox : Form
     {
-        string? name = string.Empty;
+        string name = string.Empty;
 
         public FormComboBox()
         {
