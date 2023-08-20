@@ -38,7 +38,7 @@
             rdoMale = new RadioButton();
             rdoFemale = new RadioButton();
             txtEmail = new TextBox();
-            txtlastName = new TextBox();
+            txtLastName = new TextBox();
             txtDesignation = new TextBox();
             lblEmail = new Label();
             txtFirstName = new TextBox();
@@ -66,7 +66,7 @@
             gbRegistration.Controls.Add(rdoMale);
             gbRegistration.Controls.Add(rdoFemale);
             gbRegistration.Controls.Add(txtEmail);
-            gbRegistration.Controls.Add(txtlastName);
+            gbRegistration.Controls.Add(txtLastName);
             gbRegistration.Controls.Add(txtDesignation);
             gbRegistration.Controls.Add(lblEmail);
             gbRegistration.Controls.Add(txtFirstName);
@@ -130,6 +130,7 @@
             dtgdataGridView.RowTemplate.Height = 29;
             dtgdataGridView.Size = new Size(741, 194);
             dtgdataGridView.TabIndex = 8;
+            dtgdataGridView.CellDoubleClick += DtgdataGridView_CellDoubleClick;
             // 
             // rdoMale
             // 
@@ -160,12 +161,12 @@
             txtEmail.Size = new Size(270, 27);
             txtEmail.TabIndex = 3;
             // 
-            // txtlastName
+            // txtLastName
             // 
-            txtlastName.Location = new Point(484, 30);
-            txtlastName.Name = "txtlastName";
-            txtlastName.Size = new Size(270, 27);
-            txtlastName.TabIndex = 1;
+            txtLastName.Location = new Point(484, 30);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(270, 27);
+            txtLastName.TabIndex = 1;
             // 
             // txtDesignation
             // 
@@ -265,6 +266,7 @@
             btnUpdate.TabIndex = 1;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += BtnUpdate_Click;
             // 
             // dtpDateTimePicker
             // 
@@ -301,7 +303,7 @@
         private TextBox txtFirstName;
         private Button btnSave;
         private Label lblFirstName;
-        private TextBox txtlastName;
+        private TextBox txtLastName;
         private Label lblLastName;
         private TextBox txtEmail;
         private TextBox txtDesignation;
