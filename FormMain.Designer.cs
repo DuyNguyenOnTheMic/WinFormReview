@@ -109,7 +109,7 @@
             btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += SaveData;
+            btnSave.Click += BtnSave_Click;
             // 
             // rdoMale
             // 
@@ -191,7 +191,7 @@
             btnComboBox.TabIndex = 8;
             btnComboBox.Text = "ComboBox";
             btnComboBox.UseVisualStyleBackColor = false;
-            btnComboBox.Click += NavigateToComboBox;
+            btnComboBox.Click += BtnComboBox_Click;
             // 
             // btnPanels
             // 
@@ -203,7 +203,7 @@
             btnPanels.TabIndex = 8;
             btnPanels.Text = "Panels";
             btnPanels.UseVisualStyleBackColor = false;
-            btnPanels.Click += NavigateToPanels;
+            btnPanels.Click += BtnPanels_Click;
             // 
             // errorProvider
             // 

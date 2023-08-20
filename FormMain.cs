@@ -17,8 +17,9 @@ namespace WinFormReview
             InitializeComponent();
         }
 
-        private void NavigateToComboBox(object sender, EventArgs e)
+        private void BtnComboBox_Click(object sender, EventArgs e)
         {
+            // Navigate to form combobox
             new FormComboBox()
             {
                 Tag = this
@@ -26,8 +27,9 @@ namespace WinFormReview
             Hide();
         }
 
-        private void NavigateToPanels(object sender, EventArgs e)
+        private void BtnPanels_Click(object sender, EventArgs e)
         {
+            // Navigate to form Panels
             new FormPanels()
             {
                 Tag = this
@@ -35,8 +37,9 @@ namespace WinFormReview
             Hide();
         }
 
-        private void SaveData(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
+            // Check validations
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 name = txtName.Text;
@@ -78,6 +81,7 @@ namespace WinFormReview
             txtSalary.Text = string.Empty;
         }
 
+        #region Validations
         private void TxtNameValidating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Text))
@@ -124,5 +128,6 @@ namespace WinFormReview
                 errorProvider.SetError(txtSalary, "");
             }
         }
+        #endregion
     }
 }
