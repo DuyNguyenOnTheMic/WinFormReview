@@ -97,6 +97,26 @@ namespace WinFormReview
             }
         }
 
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Delete employee
+                connection.Open();
+                command = new SqlCommand($"DELETE FROM EMPLOYEE "
+                                         + $"WHERE Id='{id}'", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Your data has been deleted in the database! 😊");
+                Display();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                connection.Close();
+            }
+        }
+
         private void Display()
         {
             try
